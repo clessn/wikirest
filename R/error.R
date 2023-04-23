@@ -1,5 +1,7 @@
 #' Throw an error if parameter is null
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @param parameters List or vector of parameters.
 #'
 #' @keywords internal
