@@ -2,7 +2,7 @@
 #'
 #' @param ... further arguments to httr's GET.
 #'
-#' @noRd
+#' @keywords internal
 #'
 #' @return A modified HTTP request.
 #' @export
