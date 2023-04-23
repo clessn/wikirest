@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of wikirest is to …
+The goal of wikirest is to get data from the Wikimedia REST API.
 
 ## Installation
 
@@ -19,8 +19,6 @@ devtools::install_github("clessn/wikirest")
 ```
 
 ## Example
-
-This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(wikirest)
