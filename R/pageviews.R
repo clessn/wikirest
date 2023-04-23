@@ -25,9 +25,11 @@ get_most_viewed_per_country <- function(country = "CA", access = "all-access", y
 
   path <- paste("", country, access, year, month, day, sep = "/")
 
-  wikirest::create_pageviews_req() |>
+  resp <- wikirest::create_pageviews_req() |>
     httr2::req_url_path_append("/top-per-country") |>
     httr2::req_url_path_append(path) |>
     httr2::req_throttle(100/1) |>
     httr2::req_perform()
+
+  return(resp)
 }
