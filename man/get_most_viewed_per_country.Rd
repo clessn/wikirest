@@ -5,11 +5,11 @@
 \title{Get most viewed articles per country}
 \usage{
 get_most_viewed_per_country(
-  country = "CA",
-  access = "all-access",
-  year = "2022",
-  month = "01",
-  day = "01",
+  country = NULL,
+  access = NULL,
+  year = NULL,
+  month = NULL,
+  day = NULL,
   tidy = TRUE
 )
 }
@@ -32,4 +32,8 @@ If tidy = TRUE, a tibble, if false, an httr2_response.
 }
 \description{
 Get most viewed articles per country
+}
+\examples{
+get_most_viewed_per_country(country = "CA", access = "all-access",
+  year = "2022", month = "01", day = "01", tidy = TRUE)
 }

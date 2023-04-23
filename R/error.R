@@ -1,0 +1,13 @@
+#' Throw an error if parameter is null
+#'
+#' @param parameters List or vector of parameters.
+#'
+#' @keywords internal
+#'
+#' @return Error message if parameters missing.
+#' @export
+error_if_parameter_null <- function(parameters = NULL) {
+  if (any(sapply(parameters, is.null))) {
+    stop("One or more parameters are NULL.")
+  }
+}
