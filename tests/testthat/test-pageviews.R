@@ -17,5 +17,4 @@ test_that("create pageviews request works", {
                                       tidy = TRUE)
 
   expect_s3_class(data, "tbl_df")
-
 })
