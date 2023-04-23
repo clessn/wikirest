@@ -32,8 +32,10 @@ devtools::install_github("clessn/wikirest")
 ## Example
 
 ```{r example}
-library(wikirest)
-## basic example code
+library("wikirest")
+
+get_most_viewed_per_country() |>
+  utils::head()
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
