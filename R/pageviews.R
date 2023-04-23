@@ -21,10 +21,9 @@ create_pageviews_req <- function() {
 #'
 #' @return A modified HTTP request.
 #' @export
-#'
 get_most_viewed_per_country <- function(country = "CA", access = "all-access", year = "2022", month = "01", day = "01") {
 
-  path <- paste(country, access, year, month, day, sep = "/")
+  path <- paste("", country, access, year, month, day, sep = "/")
 
   wikirest::create_pageviews_req() |>
     httr2::req_url_path_append("/top-per-country") |>
