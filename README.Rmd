@@ -46,3 +46,7 @@ get_most_viewed_per_country(
 ) |>
   utils::head()
 ```
+
+## Usage
+
+For API documentation, terms of service and licensing information, see [wikimedia.org/api/rest_v1/](https://wikimedia.org/api/rest_v1/).
