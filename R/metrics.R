@@ -6,6 +6,6 @@
 #' @export
 #'
 create_metrics_req <- function() {
-  request() |>
+  create_req() |>
     httr2::req_url_path_append("/metrics")
 }
