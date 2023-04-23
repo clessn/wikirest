@@ -4,10 +4,7 @@
 \alias{create_metrics_req}
 \title{Create metrics request}
 \usage{
-create_metrics_req(...)
-}
-\arguments{
-\item{...}{further arguments to httr's GET.}
+create_metrics_req()
 }
 \value{
 A modified HTTP request.
