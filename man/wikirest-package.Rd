@@ -4,12 +4,12 @@
 \name{wikirest-package}
 \alias{wikirest}
 \alias{wikirest-package}
-\title{wikirest: What the Package Does (One Line, Title Case)}
+\title{wikirest: Get data from the Wikimedia REST API}
 \description{
-What the package does (one paragraph).
+Get data from the Wikimedia REST API
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Judith Bourque \email{info@clessn.ca}
 
 }
 \keyword{internal}
