@@ -4,10 +4,7 @@
 \alias{create_req}
 \title{Create request}
 \usage{
-create_req(...)
-}
-\arguments{
-\item{...}{further arguments to httr's GET.}
+create_req()
 }
 \value{
 A modified HTTP request.
