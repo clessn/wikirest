@@ -46,3 +46,8 @@ get_most_viewed_per_country(
 #> 5 CA      all-access 2022  01    01    Wikipédia:Accue… fr.wik…      27900     5
 #> 6 CA      all-access 2022  01    01    Arnel_Pineda     en.wik…      26000     6
 ```
+
+## Usage
+
+For API documentation, terms of service and licensing information, see
+[wikimedia.org/api/rest_v1/](https://wikimedia.org/api/rest_v1/).
