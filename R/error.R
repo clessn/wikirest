@@ -2,6 +2,8 @@
 #'
 #' @param parameters List or vector of parameters.
 #'
+#' @keywords internal
+#'
 #' @return Error message if parameters missing.
 #' @export
 error_if_parameter_null <- function(parameters = NULL) {

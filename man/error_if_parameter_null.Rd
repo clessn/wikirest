@@ -15,3 +15,4 @@ Error message if parameters missing.
 \description{
 Throw an error if parameter is null
 }
+\keyword{internal}
