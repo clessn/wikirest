@@ -25,6 +25,9 @@ create_pageviews_req <- function() {
 get_most_viewed_per_country <- function(country = "CA", access = "all-access", year = "2022", month = "01", day = "01", tidy = TRUE) {
   articles <- NULL # quiet global variable note
 
+  parameters <- list(country, access, year, month, day, tidy)
+
+  error_if_parameter_null(parameters)
 
   path <- paste("", country, access, year, month, day, sep = "/")
 
