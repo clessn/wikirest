@@ -6,7 +6,7 @@
 \alias{wikirest-package}
 \title{wikirest: Get data from the Wikimedia REST API}
 \description{
-Get data from the Wikimedia REST API
+Get data from the Wikimedia REST API.
 }
 \author{
 \strong{Maintainer}: Judith Bourque \email{info@clessn.ca}
