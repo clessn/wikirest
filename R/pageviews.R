@@ -18,10 +18,11 @@ create_pageviews_req <- function() {
 #' @param year String. Year in YYYY format.
 #' @param month String. Month in MM format.
 #' @param day String. Day in DD format.
+#' @param tidy Logical. TRUE to return a data frame. FALSE to return an httr2_response.
 #'
-#' @return A modified HTTP request.
+#' @return If tidy = TRUE, a data frame, if false, an httr2_response.
 #' @export
-get_most_viewed_per_country <- function(country = "CA", access = "all-access", year = "2022", month = "01", day = "01") {
+get_most_viewed_per_country <- function(country = "CA", access = "all-access", year = "2022", month = "01", day = "01", tidy = TRUE) {
 
   path <- paste("", country, access, year, month, day, sep = "/")
 
@@ -31,5 +32,16 @@ get_most_viewed_per_country <- function(country = "CA", access = "all-access", y
     httr2::req_throttle(100/1) |>
     httr2::req_perform()
 
-  return(resp)
+  if (tidy) {
+
+    json <- httr2::resp_body_json(resp)
+
+    data <- tibble::as_tibble(json[["items"]][[1]]) %>%
+      mutate(articles = purrr::map(articles, tibble::as_tibble)) %>%
+      tidyr::unnest(articles)
+
+    return(data)
+  } else {
+    return(resp)
+  }
 }

@@ -9,7 +9,8 @@ get_most_viewed_per_country(
   access = "all-access",
   year = "2022",
   month = "01",
-  day = "01"
+  day = "01",
+  tidy = TRUE
 )
 }
 \arguments{
@@ -23,9 +24,11 @@ mobile-web.}
 \item{month}{String. Month in MM format.}
 
 \item{day}{String. Day in DD format.}
+
+\item{tidy}{Logical. TRUE to return a data frame. FALSE to return an httr2_response.}
 }
 \value{
-A modified HTTP request.
+If tidy = TRUE, a data frame, if false, an httr2_response.
 }
 \description{
 Get most viewed articles per country
