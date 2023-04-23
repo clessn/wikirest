@@ -22,7 +22,10 @@ create_pageviews_req <- function() {
 #'
 #' @return If tidy = TRUE, a tibble, if false, an httr2_response.
 #' @export
-get_most_viewed_per_country <- function(country = "CA", access = "all-access", year = "2022", month = "01", day = "01", tidy = TRUE) {
+#'
+#' @examples
+#' get_most_viewed_per_country(country = "CA", access = "all-access", year = "2022", month = "01", day = "01", tidy = TRUE)
+get_most_viewed_per_country <- function(country = NULL, access = NULL, year = NULL, month = NULL, day = NULL, tidy = TRUE) {
   articles <- NULL # quiet global variable note
 
   parameters <- list(country, access, year, month, day, tidy)
