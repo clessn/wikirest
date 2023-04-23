@@ -13,9 +13,16 @@ get_most_viewed_per_country(
 )
 }
 \arguments{
-\item{country}{description}
+\item{country}{String. ISO 3166-1 alpha-2 code of a country}
 
-\item{access}{all-access, desktop, mobile-app, mobile-web}
+\item{access}{String. One of the following: all-access, desktop, mobile-app,
+mobile-web.}
+
+\item{year}{String. Year in YYYY format.}
+
+\item{month}{String. Month in MM format.}
+
+\item{day}{String. Day in DD format.}
 }
 \value{
 A modified HTTP request.

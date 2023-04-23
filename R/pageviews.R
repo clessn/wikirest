@@ -12,8 +12,12 @@ create_pageviews_req <- function() {
 
 #' Get most viewed articles per country
 #'
-#' @param country description
-#' @param access all-access, desktop, mobile-app, mobile-web
+#' @param country String. ISO 3166-1 alpha-2 code of a country
+#' @param access String. One of the following: all-access, desktop, mobile-app,
+#' mobile-web.
+#' @param year String. Year in YYYY format.
+#' @param month String. Month in MM format.
+#' @param day String. Day in DD format.
 #'
 #' @keywords internal
 #'
