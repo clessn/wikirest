@@ -36,8 +36,8 @@ get_most_viewed_per_country <- function(country = "CA", access = "all-access", y
 
     json <- httr2::resp_body_json(resp)
 
-    data <- tibble::as_tibble(json[["items"]][[1]]) %>%
-      mutate(articles = purrr::map(articles, tibble::as_tibble)) %>%
+    data <- tibble::as_tibble(json[["items"]][[1]]) |>
+      mutate(articles = purrr::map(articles, tibble::as_tibble)) |>
       tidyr::unnest(articles)
 
     return(data)
