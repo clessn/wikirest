@@ -7,7 +7,7 @@
 error_if_parameter_null(parameters = NULL)
 }
 \arguments{
-\item{parameters}{List of parameters.}
+\item{parameters}{List or vector of parameters.}
 }
 \value{
 Error message if parameters missing.
