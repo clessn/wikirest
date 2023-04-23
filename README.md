@@ -23,7 +23,14 @@ devtools::install_github("clessn/wikirest")
 ``` r
 library("wikirest")
 
-get_most_viewed_per_country() |>
+get_most_viewed_per_country(
+  country = "CA",
+  access = "all-access",
+  year = "2022",
+  month = "01",
+  day = "01",
+  tidy = TRUE
+) |>
   utils::head()
 #> # A tibble: 6 × 9
 #>   country access     year  month day   article          project views_ceil  rank
