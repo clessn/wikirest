@@ -4,6 +4,8 @@
 # wikirest
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/clessn/wikirest/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/clessn/wikirest/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of wikirest is to get data from the Wikimedia REST API.
