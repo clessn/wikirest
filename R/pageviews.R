@@ -19,8 +19,6 @@ create_pageviews_req <- function() {
 #' @param month String. Month in MM format.
 #' @param day String. Day in DD format.
 #'
-#' @keywords internal
-#'
 #' @return A modified HTTP request.
 #' @export
 #'

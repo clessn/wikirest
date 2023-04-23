@@ -30,4 +30,3 @@ A modified HTTP request.
 \description{
 Get most viewed articles per country
 }
-\keyword{internal}
