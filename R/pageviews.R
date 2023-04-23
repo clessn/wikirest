@@ -1,5 +1,7 @@
 #' Create pageviews request
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @keywords internal
 #'
 #' @return A modified HTTP request.
@@ -11,6 +13,8 @@ create_pageviews_req <- function() {
 }
 
 #' Get most viewed articles per country
+#'
+#' `r lifecycle::badge('experimental')`
 #'
 #' @param country String. ISO 3166-1 alpha-2 code of a country
 #' @param access String. One of the following: all-access, desktop, mobile-app,

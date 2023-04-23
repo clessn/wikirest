@@ -10,6 +10,6 @@ create_pageviews_req()
 A modified HTTP request.
 }
 \description{
-Create pageviews request
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
 \keyword{internal}

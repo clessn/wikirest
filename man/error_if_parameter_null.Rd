@@ -13,6 +13,6 @@ error_if_parameter_null(parameters = NULL)
 Error message if parameters missing.
 }
 \description{
-Throw an error if parameter is null
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
 \keyword{internal}

@@ -1,5 +1,7 @@
 #' Create request
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @keywords internal
 #'
 #' @return A modified HTTP request.
@@ -11,6 +13,8 @@ create_req <- function() {
 }
 
 #' Add user agent to request
+#'
+#' `r lifecycle::badge('experimental')`
 #'
 #' @param req A HTTP request.
 #'

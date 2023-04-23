@@ -1,5 +1,7 @@
 #' Create metrics request
 #'
+#' `r lifecycle::badge('experimental')`
+#'
 #' @keywords internal
 #'
 #' @return A modified HTTP request.

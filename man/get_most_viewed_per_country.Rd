@@ -31,7 +31,7 @@ mobile-web.}
 If tidy = TRUE, a tibble, if false, an httr2_response.
 }
 \description{
-Get most viewed articles per country
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
 \examples{
 get_most_viewed_per_country(country = "CA", access = "all-access",
