@@ -25,10 +25,10 @@ mobile-web.}
 
 \item{day}{String. Day in DD format.}
 
-\item{tidy}{Logical. TRUE to return a data frame. FALSE to return an httr2_response.}
+\item{tidy}{Logical. TRUE to return a tibble. FALSE to return an httr2_response.}
 }
 \value{
-If tidy = TRUE, a data frame, if false, an httr2_response.
+If tidy = TRUE, a tibble, if false, an httr2_response.
 }
 \description{
 Get most viewed articles per country

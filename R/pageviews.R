@@ -18,9 +18,9 @@ create_pageviews_req <- function() {
 #' @param year String. Year in YYYY format.
 #' @param month String. Month in MM format.
 #' @param day String. Day in DD format.
-#' @param tidy Logical. TRUE to return a data frame. FALSE to return an httr2_response.
+#' @param tidy Logical. TRUE to return a tibble. FALSE to return an httr2_response.
 #'
-#' @return If tidy = TRUE, a data frame, if false, an httr2_response.
+#' @return If tidy = TRUE, a tibble, if false, an httr2_response.
 #' @export
 get_most_viewed_per_country <- function(country = "CA", access = "all-access", year = "2022", month = "01", day = "01", tidy = TRUE) {
 
