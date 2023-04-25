@@ -2,7 +2,6 @@
 #'
 #' `r lifecycle::badge('experimental')`
 #'
-#' @keywords internal
 #' @noRd
 #'
 #' @return A modified HTTP request.
@@ -17,7 +16,6 @@ create_req <- function() {
 #'
 #' @param req A HTTP request.
 #'
-#' @keywords internal
 #' @noRd
 #'
 #' @return A modified HTTP request.
