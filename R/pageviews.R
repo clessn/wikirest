@@ -38,7 +38,7 @@ get_most_viewed_per_country <- function(country = NULL, access = NULL, year = NU
 
   path <- paste("", country, access, year, month, day, sep = "/")
 
-  resp <- wikirest::create_pageviews_req() |>
+  resp <- create_pageviews_req() |>
     httr2::req_url_path_append("/top-per-country") |>
     httr2::req_url_path_append(path) |>
     httr2::req_throttle(100/1) |>
