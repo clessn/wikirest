@@ -2,7 +2,6 @@
 #'
 #' `r lifecycle::badge('experimental')`
 #'
-#' @keywords internal
 #' @noRd
 #'
 #' @return A modified HTTP request.
