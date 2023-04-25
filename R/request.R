@@ -18,10 +18,9 @@ create_req <- function() {
 #' @param req A HTTP request.
 #'
 #' @keywords internal
+#' @noRd
 #'
 #' @return A modified HTTP request.
-#' @export
-#'
 add_user_agent <- function(req) {
   req |>
     httr2::req_user_agent("wikirest (https://github.com/clessn; info@clessn.ca)")
