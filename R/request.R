@@ -3,10 +3,9 @@
 #' `r lifecycle::badge('experimental')`
 #'
 #' @keywords internal
+#' @noRd
 #'
 #' @return A modified HTTP request.
-#' @export
-#'
 create_req <- function() {
   httr2::request("https://wikimedia.org") |>
     httr2::req_url_path_append("/api/rest_v1")
