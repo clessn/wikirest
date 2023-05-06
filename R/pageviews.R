@@ -47,8 +47,10 @@ get_most_viewed_per_country <-
       deprecate_warn("1.0.0", "wikirest::get_most_viewed_per_country(month = )", "wikirest::get_most_viewed_per_country(date = )")
       deprecate_warn("1.0.0", "wikirest::get_most_viewed_per_country(day = )", "wikirest::get_most_viewed_per_country(date = )")
 
-      # Deal with the deprecated argument for compatibility
-      date <- paste(year, month, day, sep = "-")
+      if (lifecycle::is_present(year) & lifecycle::is_present(month) & lifecycle::is_present(day)) {
+        # Deal with the deprecated argument for compatibility
+        date <- paste(year, month, day, sep = "-")
+      }
     }
 
     parameters <- list(country, access, date, tidy)
