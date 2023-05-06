@@ -38,5 +38,5 @@ If tidy = TRUE, a tibble, if false, an httr2_response.
 }
 \examples{
 get_most_viewed_per_country(country = "CA", access = "all-access",
-  year = "2022", month = "01", day = "01", tidy = TRUE)
+  date = "2022-01-01", tidy = TRUE)
 }
