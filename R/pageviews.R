@@ -17,6 +17,7 @@ create_pageviews_req <- function() {
 #' @param country String. ISO 3166-1 alpha-2 code of a country
 #' @param access String. One of the following: all-access, desktop, mobile-app,
 #' mobile-web.
+#' @param date Date.
 #' @param year String. Year in YYYY format.
 #' @param month String. Month in MM format.
 #' @param day String. Day in DD format.
@@ -28,7 +29,7 @@ create_pageviews_req <- function() {
 #' @examples
 #' get_most_viewed_per_country(country = "CA", access = "all-access",
 #'   year = "2022", month = "01", day = "01", tidy = TRUE)
-get_most_viewed_per_country <- function(country = NULL, access = NULL, year = NULL, month = NULL, day = NULL, tidy = TRUE) {
+get_most_viewed_per_country <- function(country = NULL, access = NULL, date = NULL, year = NULL, month = NULL, day = NULL, tidy = TRUE) {
   articles <- NULL # quiet global variable note
 
   if (is.null(date) == FALSE) {

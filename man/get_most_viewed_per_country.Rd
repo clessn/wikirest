@@ -7,6 +7,7 @@
 get_most_viewed_per_country(
   country = NULL,
   access = NULL,
+  date = NULL,
   year = NULL,
   month = NULL,
   day = NULL,
@@ -18,6 +19,8 @@ get_most_viewed_per_country(
 
 \item{access}{String. One of the following: all-access, desktop, mobile-app,
 mobile-web.}
+
+\item{date}{Date.}
 
 \item{year}{String. Year in YYYY format.}
 
