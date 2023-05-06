@@ -33,11 +33,23 @@ get_most_viewed_per_country <-
   function(country = NULL,
            access = NULL,
            date = NULL,
-           year = NULL,
-           month = NULL,
-           day = NULL,
-           tidy = TRUE) {
+           tidy = TRUE,
+           year = deprecated(),
+           month = deprecated(),
+           day = deprecated()) {
     articles <- NULL # quiet global variable note
+
+    # Check if user has supplied `year`, `month`, `day` instead of `date`
+    if (lifecycle::is_present(year) | lifecycle::is_present(month) | lifecycle::is_present(day)) {
+
+      # Signal the deprecation to the user
+      deprecate_warn("1.0.0", "wikirest::get_most_viewed_per_country(year = )", "wikirest::get_most_viewed_per_country(date = )")
+      deprecate_warn("1.0.0", "wikirest::get_most_viewed_per_country(month = )", "wikirest::get_most_viewed_per_country(date = )")
+      deprecate_warn("1.0.0", "wikirest::get_most_viewed_per_country(day = )", "wikirest::get_most_viewed_per_country(date = )")
+
+      # Deal with the deprecated argument for compatibility
+      date <- paste(year, month, day, sep = "-")
+    }
 
     parameters <- list(country, access, date, tidy)
 

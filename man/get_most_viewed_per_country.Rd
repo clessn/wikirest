@@ -8,10 +8,10 @@ get_most_viewed_per_country(
   country = NULL,
   access = NULL,
   date = NULL,
-  year = NULL,
-  month = NULL,
-  day = NULL,
-  tidy = TRUE
+  tidy = TRUE,
+  year = deprecated(),
+  month = deprecated(),
+  day = deprecated()
 )
 }
 \arguments{
@@ -22,13 +22,13 @@ mobile-web.}
 
 \item{date}{String. Date in YYYY-MM-DD format.}
 
+\item{tidy}{Logical. TRUE to return a tibble. FALSE to return an httr2_response.}
+
 \item{year}{String. Year in YYYY format.}
 
 \item{month}{String. Month in MM format.}
 
 \item{day}{String. Day in DD format.}
-
-\item{tidy}{Logical. TRUE to return a tibble. FALSE to return an httr2_response.}
 }
 \value{
 If tidy = TRUE, a tibble, if false, an httr2_response.
