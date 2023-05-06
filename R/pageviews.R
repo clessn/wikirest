@@ -29,40 +29,44 @@ create_pageviews_req <- function() {
 #' @examples
 #' get_most_viewed_per_country(country = "CA", access = "all-access",
 #'   year = "2022", month = "01", day = "01", tidy = TRUE)
-get_most_viewed_per_country <- function(country = NULL, access = NULL, date = NULL, year = NULL, month = NULL, day = NULL, tidy = TRUE) {
-  articles <- NULL # quiet global variable note
+get_most_viewed_per_country <-
+  function(country = NULL,
+           access = NULL,
+           date = NULL,
+           year = NULL,
+           month = NULL,
+           day = NULL,
+           tidy = TRUE) {
+    articles <- NULL # quiet global variable note
 
-  if (is.null(date) == FALSE) {
+    parameters <- list(country, access, date, tidy)
+
+    error_if_parameter_null(parameters)
+
     if (is.character(date) == TRUE) {
       date <- as.Date(date)
     }
     year <- format(date, "%Y")
     month <- format(date, "%m")
     day <- format(date, "%d")
+
+    path <- paste("", country, access, year, month, day, sep = "/")
+
+    resp <- create_pageviews_req() |>
+      httr2::req_url_path_append("/top-per-country") |>
+      httr2::req_url_path_append(path) |>
+      httr2::req_throttle(100 / 1) |>
+      httr2::req_perform()
+
+    if (tidy) {
+      json <- httr2::resp_body_json(resp)
+
+      data <- tibble::as_tibble(json[["items"]][[1]]) |>
+        dplyr::mutate(articles = purrr::map(articles, tibble::as_tibble)) |>
+        tidyr::unnest(articles)
+
+      return(data)
+    } else {
+      return(resp)
+    }
   }
-
-  parameters <- list(country, access, year, month, day, tidy)
-
-  error_if_parameter_null(parameters)
-
-  path <- paste("", country, access, year, month, day, sep = "/")
-
-  resp <- create_pageviews_req() |>
-    httr2::req_url_path_append("/top-per-country") |>
-    httr2::req_url_path_append(path) |>
-    httr2::req_throttle(100/1) |>
-    httr2::req_perform()
-
-  if (tidy) {
-
-    json <- httr2::resp_body_json(resp)
-
-    data <- tibble::as_tibble(json[["items"]][[1]]) |>
-      dplyr::mutate(articles = purrr::map(articles, tibble::as_tibble)) |>
-      tidyr::unnest(articles)
-
-    return(data)
-  } else {
-    return(resp)
-  }
-}

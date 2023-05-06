@@ -12,3 +12,4 @@ error_if_parameter_null <- function(parameters = NULL) {
     stop("One or more parameters are NULL.")
   }
 }
+
