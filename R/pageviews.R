@@ -41,6 +41,7 @@ get_most_viewed_per_country <-
 
     # Check if user has supplied `year`, `month`, `day` instead of `date`
     if (lifecycle::is_present(year) | lifecycle::is_present(month) | lifecycle::is_present(day)) {
+      # Signal the deprecation to the user
       if (lifecycle::is_present(year)) {
         lifecycle::deprecate_warn("0.0.0.9016", "wikirest::get_most_viewed_per_country(year = )", "wikirest::get_most_viewed_per_country(date = )")
       }
@@ -52,8 +53,6 @@ get_most_viewed_per_country <-
       if (lifecycle::is_present(day)) {
         lifecycle::deprecate_warn("0.0.0.9016", "wikirest::get_most_viewed_per_country(day = )", "wikirest::get_most_viewed_per_country(date = )")
       }
-
-      # Signal the deprecation to the user
 
       if (lifecycle::is_present(year) & lifecycle::is_present(month) & lifecycle::is_present(day)) {
         # Deal with the deprecated argument for compatibility
