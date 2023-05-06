@@ -17,7 +17,7 @@ create_pageviews_req <- function() {
 #' @param country String. ISO 3166-1 alpha-2 code of a country
 #' @param access String. One of the following: all-access, desktop, mobile-app,
 #' mobile-web.
-#' @param date Date.
+#' @param date String. Date in YYYY-MM-DD format.
 #' @param year String. Year in YYYY format.
 #' @param month String. Month in MM format.
 #' @param day String. Day in DD format.

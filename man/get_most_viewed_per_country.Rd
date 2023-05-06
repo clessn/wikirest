@@ -20,7 +20,7 @@ get_most_viewed_per_country(
 \item{access}{String. One of the following: all-access, desktop, mobile-app,
 mobile-web.}
 
-\item{date}{Date.}
+\item{date}{String. Date in YYYY-MM-DD format.}
 
 \item{year}{String. Year in YYYY format.}
 
