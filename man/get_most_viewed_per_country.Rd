@@ -7,10 +7,11 @@
 get_most_viewed_per_country(
   country = NULL,
   access = NULL,
-  year = NULL,
-  month = NULL,
-  day = NULL,
-  tidy = TRUE
+  date = NULL,
+  tidy = TRUE,
+  year = deprecated(),
+  month = deprecated(),
+  day = deprecated()
 )
 }
 \arguments{
@@ -19,13 +20,15 @@ get_most_viewed_per_country(
 \item{access}{String. One of the following: all-access, desktop, mobile-app,
 mobile-web.}
 
+\item{date}{String. Date in YYYY-MM-DD format.}
+
+\item{tidy}{Logical. TRUE to return a tibble. FALSE to return an httr2_response.}
+
 \item{year}{String. Year in YYYY format.}
 
 \item{month}{String. Month in MM format.}
 
 \item{day}{String. Day in DD format.}
-
-\item{tidy}{Logical. TRUE to return a tibble. FALSE to return an httr2_response.}
 }
 \value{
 If tidy = TRUE, a tibble, if false, an httr2_response.
@@ -35,5 +38,5 @@ If tidy = TRUE, a tibble, if false, an httr2_response.
 }
 \examples{
 get_most_viewed_per_country(country = "CA", access = "all-access",
-  year = "2022", month = "01", day = "01", tidy = TRUE)
+  date = "2022-01-01", tidy = TRUE)
 }

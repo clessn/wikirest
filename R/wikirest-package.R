@@ -9,5 +9,6 @@
 #' @importFrom purrr map
 #' @importFrom tibble as_tibble
 #' @importFrom tidyr unnest
+#' @importFrom withr local_options
 ## usethis namespace: end
 NULL
