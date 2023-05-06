@@ -17,4 +17,10 @@ test_that("create pageviews request works", {
                                       tidy = TRUE)
 
   expect_s3_class(data, "tbl_df")
+
+  withr::local_options(lifecycle_verbosity = "quiet")
+
+  lifecycle::expect_deprecated(get_most_viewed_per_country(country = "CA", access = "all-access",
+                                                           year = "2022", month = "01", day = "01",
+                                                           tidy = TRUE))
 })
