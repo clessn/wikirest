@@ -14,7 +14,8 @@ Imports:
     lifecycle,
     purrr,
     tibble,
-    tidyr
+    tidyr,
+    withr
 Suggests: 
     covr,
     testthat (>= 3.0.0)
