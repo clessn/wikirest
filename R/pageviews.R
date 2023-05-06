@@ -33,6 +33,9 @@ get_most_viewed_per_country <- function(country = NULL, access = NULL, date = NU
   articles <- NULL # quiet global variable note
 
   if (is.null(date) == FALSE) {
+    if (is.character(date) == TRUE) {
+      date <- as.Date(date)
+    }
     year <- format(date, "%Y")
     month <- format(date, "%m")
     day <- format(date, "%d")
