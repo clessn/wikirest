@@ -31,6 +31,12 @@ create_pageviews_req <- function() {
 get_most_viewed_per_country <- function(country = NULL, access = NULL, year = NULL, month = NULL, day = NULL, tidy = TRUE) {
   articles <- NULL # quiet global variable note
 
+  if (is.null(date) == FALSE) {
+    year <- format(date, "%Y")
+    month <- format(date, "%m")
+    day <- format(date, "%d")
+  }
+
   parameters <- list(country, access, year, month, day, tidy)
 
   error_if_parameter_null(parameters)
