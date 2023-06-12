@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 # wikirest
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/wikiverse)](https://CRAN.R-project.org/package=wikiverse)
 [![R-CMD-check](https://github.com/clessn/wikirest/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/clessn/wikirest/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/clessn/wikirest/branch/main/graph/badge.svg)](https://app.codecov.io/gh/clessn/wikirest?branch=main)
 <!-- badges: end -->
