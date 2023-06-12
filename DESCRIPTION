@@ -1,6 +1,6 @@
 Package: wikirest
 Title: Get data from the Wikimedia REST API
-Version: 0.0.0.9016
+Version: 0.0.0.9017
 Authors@R: 
     person("Judith", "Bourque", , "info@clessn.ca", role = c("aut", "cre"))
 Description: Get data from the Wikimedia REST API.
